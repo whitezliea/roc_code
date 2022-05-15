@@ -17,4 +17,4 @@
 #include<string.h>
 #include<sys/types.h>
 
-#endif //ROC_CORE_STDD
+#endif //ROC_CORE_STDDEFS_H_
