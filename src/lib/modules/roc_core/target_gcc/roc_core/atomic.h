@@ -12,11 +12,11 @@ namespace roc
     {
         //!Atmoic integer
         class Atomic : public Noncopyable<>
-        [
-            public:
+        {
+        public:
             //! Initialize with given value
-            explicit Atomic(long value = 0) : value_(value)
-            {
+            explicit Atomic(long value = 0) 
+                : value_(value){
 
             }
 
@@ -27,7 +27,7 @@ namespace roc
             }
 
             //! Atomic store
-            long opeartor=(bool v)
+            long operator=(bool v)
             {
                 if (v)
                 {
@@ -55,7 +55,7 @@ namespace roc
         private:
             mutable long value_;
 
-        ]
+        };
     } // namespace core
     
 } // namespace roc

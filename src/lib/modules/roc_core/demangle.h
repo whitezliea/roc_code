@@ -8,14 +8,14 @@
 
 namespace roc
 {
-    namespace roc_core
+    namespace core
     {
         //! Demangle symbol name
         //! This function is not signal-safe
 
         const char* demangle(const char* mangled , char* &demangle_buf, size_t& demangle_size);
         
-    } // namespace roc_core
+    } // namespace core
     
 } // namespace roc
 
