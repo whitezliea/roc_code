@@ -12,7 +12,7 @@
 #endif
 
 //! Panic is condition is ture.
-#define roc_panic_if (x)        \
+#define roc_panic_if(x)        \
     do {                        \
         if ((x)) {              \
              roc_panic("%s", #x); \
@@ -31,7 +31,8 @@ namespace roc
     namespace core
     {
         //Print error message and terminate program gracefully
-        void painic(const char* module, const char* file, int line, const char* fromat, ...) ROC_ATTR_NORETURN ROC_ATTR_PRINTF(4, 5);
+        void panic(const char* module, const char* file, int line, const char* fromat, ...) 
+            ROC_ATTR_NORETURN ROC_ATTR_PRINTF(4, 5);
     } // namespace core
 
 } // namespace roc

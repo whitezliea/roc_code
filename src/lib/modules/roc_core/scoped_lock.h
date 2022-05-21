@@ -13,6 +13,7 @@ namespace roc
         //! RAII mutex lock
         template <class Mutex> class ScopedLock : Noncopyable<>
         {
+            public:
             //! Lock
             explicit ScopedLock(const Mutex& mutex): mutex_(mutex)
             {

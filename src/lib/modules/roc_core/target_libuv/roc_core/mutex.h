@@ -17,7 +17,7 @@ namespace roc
         class Cond;
         
         //! Mutex
-        class mutex : public Noncopyable<>
+        class Mutex : public Noncopyable<>
         {
         private:
             friend class Cond;
@@ -26,7 +26,8 @@ namespace roc
         public:
 
         //! RAII lock.
-            mutex()
+            typedef ScopedLock<Mutex> Lock;
+            Mutex()
             {
                 if (int err = uv_mutex_init(&mutex_))
                 {
@@ -34,7 +35,7 @@ namespace roc
                 }
             }
 
-            ~mutex()
+            ~Mutex()
             {
                 uv_mutex_destroy(&mutex_);
             }
