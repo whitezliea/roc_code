@@ -3,6 +3,8 @@
         "*.tcc": "cpp",
         "fstream": "cpp",
         "ostream": "cpp",
-        "cstdlib": "cpp"
-    }
+        "cstdlib": "cpp",
+        "system_error": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }

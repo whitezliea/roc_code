@@ -17,7 +17,6 @@
 #define ROC_ATTR_PACKED __attribute__((packed))
 
 //! Function gets printf-likke arguments
-#define ROC_ATTR_PRINTF(n_fmt_arg, n_var_arg)               \
-    __atrribute__((format(printf, n_fmt_arg, n_var_arg)))
+#define ROC_ATTR_PRINTF(n_fmt_arg, n_var_arg)   __atrribute__((format(printf, n_fmt_arg, n_var_arg)))
 
 #endif //ROC_CORE_ATTRIBUTES_H_
