@@ -8,7 +8,7 @@
 #define ROC_ARRAY_SIZE(a) (sizeof(a)/sizeof((a)[0]))
 
 //! Cast a member of a structre out to the containing structure.
-#define ROC_CONTAINER_OF(ptr, type, member) (reinterpret_cast<type*)((char*)(ptr)-offsetof(type, member))
+#define ROC_CONTAINER_OF(ptr, type, member) (reinterpret_cast<type*>((char*)(ptr)-offsetof(type, member)))
 
 //! Stringize marco helper
 #define ROC_STRINGIZE_(s) #s
